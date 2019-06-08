@@ -17,5 +17,5 @@ We expect music venues to have clustered together over time to create pockets of
 Questions:
 1 - What are the most popular neighborhoods for music venues in New York City?
 2 - What are the most popular venues by neighborhood?
-3 - Which neighborhoods have the most loyal/repeat customers? (compare check-in count to visitors)
-4 - Which music venues have the most loyal/repeat customers?(compare check-in count to visitors)
+3 - Which neighborhoods have the most highly rated/most liked venues?
+4 - Which music venues have the most likes/highest ratings?
