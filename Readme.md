@@ -12,7 +12,7 @@ Data sets to be used:
 
 Hypothesis:
 
-We expect music venues to have clustered together over time to create pockets of similar type venues in the same area.  Similarly, we expect neighborhoods with more defined musical identities will have higher loyalty because of the sense of community it harbors.
+We expect music venues to have clustered together over time to create pockets of similar type venues in the same area.  Similarly, we expect neighborhoods with more defined musical identities will have higher ratings because of the sense of community it harbors.
 
 Questions:
 1 - What are the most popular neighborhoods for music venues in New York City?
