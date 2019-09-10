@@ -1,6 +1,7 @@
 # Music-Related Venue Analysis: New York City
 
 Team members: Nelson Leung, Faz Naimov, Greyson Ford
+
 [Final Presentation](https://github.com/faznaimov/music-venues-analysis/blob/master/presentation.pdf)
 
 ## Key Questions
@@ -178,8 +179,6 @@ venue_info(df, 1000, 1227,v=20180405)
 
 ##	Our Findings
 
--   We found 1,226 music-related venues in NYC (as defined by our selected FourSquare CategoryIDs).
-    
 -   The most popular neighborhood for music-related venues was University Heights with 23 venues in the same neighborhood.
     ![Most popular hoods](https://github.com/faznaimov/music-venues-analysis/blob/master/Output/Venue_Counts.png)
 -   While there were few Manhattan neighborhoods represented in the top 20 neighborhoods, they dominated in terms of popularity, or total number of likes.
