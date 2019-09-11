@@ -2,7 +2,7 @@
 
 Team members: Nelson Leung, Faz Naimov, Greyson Ford
 
-[Final Presentation](https://github.com/faznaimov/music-venues-analysis/blob/master/presentation.pdf)
+[Final Presentation](presentation.pdf)
 
 ## Key Questions
 
@@ -99,7 +99,7 @@ prelim_venue_data = getNearby(neighborhoods['Neighborhood'],
                               neighborhoods['Longitude'])
 ```
 
-[Data Exploration and Extraction Jupyter Notebook](https://github.com/faznaimov/music-venues-analysis/blob/master/Foursquare%20API.ipynb)
+[Data Exploration and Extraction Jupyter Notebook](Foursquare%20API.ipynb)
 
 ## Data Cleansing
 
@@ -128,7 +128,7 @@ music_related_categories = ['Music Venue', 'Lounge', 'Nightclub', 'Jazz Club', '
 ny_music_venues = ny_venue_data_with_city[ny_venue_data_with_city['Venue Category'].isin(music_related_categories)]
 ```
 
-[Data Cleansing Jupyter Notebook](https://github.com/faznaimov/music-venues-analysis/blob/master/Data%20Cleansing.ipynb)
+[Data Cleansing Jupyter Notebook](Data%20Cleansing.ipynb)
 
 ## Data Enrichment
 
@@ -174,18 +174,19 @@ def venue_info(df, start_index, end_index, v=20180405):
 venue_info(df, 1000, 1227,v=20180405)
 ```
 
-[Data Enrichment Jupyter Notebook](https://github.com/faznaimov/music-venues-analysis/blob/master/LikesnRatings.ipynb)
+[Data Enrichment Jupyter Notebook](LikesnRatings.ipynb)
 
 
 ##	Our Findings
 
 -   The most popular neighborhood for music-related venues was University Heights with 23 venues in the same neighborhood.
-    ![Most popular hoods](https://github.com/faznaimov/music-venues-analysis/blob/master/Output/Venue_Counts.png)
+    ![Most popular hoods](Output/Venue_Counts.png)
+    ![Heatmap by number of venues in hoods](Output/heatmap.png)
 -   While there were few Manhattan neighborhoods represented in the top 20 neighborhoods, they dominated in terms of popularity, or total number of likes.
-    ![Top 10 liked](https://github.com/faznaimov/music-venues-analysis/blob/master/Output/Top10bylikes.png)
-    ![Top 10 rated](https://github.com/faznaimov/music-venues-analysis/blob/master/Output/Top10byrate.png)
+    ![Top 10 liked](Output/Top10bylikes.png)
+    ![Top 10 rated](Output/Top10byrate.png)
 -   Lounges, Music Venues, and Nightclubs were the top 3 venue categories among the most liked venues.
-    ![Top Category](https://github.com/faznaimov/music-venues-analysis/blob/master/Output/pie_chart.png)
+    ![Top Category](Output/pie_chart.png)
 - Positive correlation between likes and rating once the rating goes beyond 7 that you can see on the scatter plot below. Also 8 out of top 10 neighborhoods with average likes are located in Manhattan as well as 7 out of the 10 locations for highest average rating.
-![Correlation](https://github.com/faznaimov/music-venues-analysis/blob/master/Output/correlation.png)
-[Visualizations Jupyter Notebook](https://github.com/faznaimov/music-venues-analysis/blob/master/Visualizations.ipynb)
+![Correlation](master/Output/correlation.png)
+[Visualizations Jupyter Notebook](Visualizations.ipynb)
