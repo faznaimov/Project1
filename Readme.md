@@ -180,13 +180,20 @@ venue_info(df, 1000, 1227,v=20180405)
 ##	Our Findings
 
 -   The most popular neighborhood for music-related venues was University Heights with 23 venues in the same neighborhood.
+
     ![Most popular hoods](Output/Venue_Counts.png)
     ![Heatmap by number of venues in hoods](Output/heatmap.png)
+    
 -   While there were few Manhattan neighborhoods represented in the top 20 neighborhoods, they dominated in terms of popularity, or total number of likes.
+
     ![Top 10 liked](Output/Top10bylikes.png)
     ![Top 10 rated](Output/Top10byrate.png)
+    
 -   Lounges, Music Venues, and Nightclubs were the top 3 venue categories among the most liked venues.
+
     ![Top Category](Output/pie_chart.png)
+    
 - Positive correlation between likes and rating once the rating goes beyond 7 that you can see on the scatter plot below. Also 8 out of top 10 neighborhoods with average likes are located in Manhattan as well as 7 out of the 10 locations for highest average rating.
+
 ![Correlation](master/Output/correlation.png)
 [Visualizations Jupyter Notebook](Visualizations.ipynb)
