@@ -137,6 +137,7 @@ ny_music_venues = ny_venue_data_with_city[ny_venue_data_with_city['Venue Categor
 After cleaning our initial data we enriched it with additional user inputs with a second API call to a different Foursquare endpoint.
 
 We wrote a function that accepted index values when called to work within the premium API call limit of 500 per day. By designing the function in this manner, each team member was able to utilize their respective API keys to retrieve a specific set of venues to complete our data set.
+
 ``` python
 def venue_info(df, start_index, end_index, v=20180405):
     responses = []
@@ -195,5 +196,6 @@ venue_info(df, 1000, 1227,v=20180405)
     
 - Positive correlation between likes and rating once the rating goes beyond 7 that you can see on the scatter plot below. Also 8 out of top 10 neighborhoods with average likes are located in Manhattan as well as 7 out of the 10 locations for highest average rating.
 
-![Correlation](master/Output/correlation.png)
+![Correlation](Output/correlation.png)
+
 [Visualizations Jupyter Notebook](Visualizations.ipynb)
