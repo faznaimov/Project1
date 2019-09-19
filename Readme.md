@@ -13,6 +13,7 @@ Team members: Nelson Leung, Faz Naimov, Greyson Ford
 We wanted to understand which venues were popular, in general, and which were popular by neighborhood.
 
 ## Data Exploration and Extraction
+[Data Exploration and Extraction Jupyter Notebook](Foursquare%20API.ipynb)
 
 #### NYU’s Spatial Data Repository
 
@@ -99,9 +100,10 @@ prelim_venue_data = getNearby(neighborhoods['Neighborhood'],
                               neighborhoods['Longitude'])
 ```
 
-[Data Exploration and Extraction Jupyter Notebook](Foursquare%20API.ipynb)
 
 ## Data Cleansing
+
+[Data Cleansing Jupyter Notebook](Data%20Cleansing.ipynb)
 
 First, venues located in states other than “New York” or “NY” were removed. Entries with “Venue State” equal to “New York” were changed to “NY.”
 
@@ -128,9 +130,10 @@ music_related_categories = ['Music Venue', 'Lounge', 'Nightclub', 'Jazz Club', '
 ny_music_venues = ny_venue_data_with_city[ny_venue_data_with_city['Venue Category'].isin(music_related_categories)]
 ```
 
-[Data Cleansing Jupyter Notebook](Data%20Cleansing.ipynb)
 
 ## Data Enrichment
+
+[Data Enrichment Jupyter Notebook](LikesnRatings.ipynb)
 
 #### Music-related Venues: Adding Likes and Ratings
 
@@ -175,10 +178,10 @@ def venue_info(df, start_index, end_index, v=20180405):
 venue_info(df, 1000, 1227,v=20180405)
 ```
 
-[Data Enrichment Jupyter Notebook](LikesnRatings.ipynb)
-
 
 ##	Our Findings
+
+[Findings Jupyter Notebook](Visualizations.ipynb)
 
 -   The most popular neighborhood for music-related venues was University Heights with 23 venues in the same neighborhood.
 
@@ -197,5 +200,3 @@ venue_info(df, 1000, 1227,v=20180405)
 - Positive correlation between likes and rating once the rating goes beyond 7 that you can see on the scatter plot below. Also 8 out of top 10 neighborhoods with average likes are located in Manhattan as well as 7 out of the 10 locations for highest average rating.
 
 ![Correlation](Output/correlation.png)
-
-[Visualizations Jupyter Notebook](Visualizations.ipynb)
