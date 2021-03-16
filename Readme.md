@@ -6,7 +6,7 @@ Team members: Nelson Leung, Faz Naimov, Greyson Ford
 
 ## Key Questions
 
- 1. What are the most popular neighborhoods for music venues in NYC?
+1. What are the most popular neighborhoods for music venues in NYC?
 2. What are the most popular venues by Category?
 3. Which neighborhoods have the most highly rated/most liked venues? And is there a relationship between likes and ratings?
 
@@ -17,11 +17,11 @@ We wanted to understand which venues were popular, in general, and which were po
 
 #### NYU’s Spatial Data Repository
 
-Our search was focused on the 5 boroughs of New York City. We used the 2014 New York City Neighborhood Names’ dataset hosted by NYU’s Spatial Data Repository as the basis for defining neighborhoods’ location (via location centroids) and name.
+Our search was focused on the 5 boroughs of New York City. We used the 2014 New York City Neighborhood Names dataset hosted by NYU's Spatial Data Repository as the basis for defining neighborhoods' location (via location centroids) and name.
 
 [NYU’s Spatial Data](https://geo.nyu.edu/catalog/nyu-2451-34572)
 
-We downloaded the ‘2014 New York City Neighborhood Names’ dataset hosted by NYU’s Spatial Data Repository as a JSON file and imported into a Jupyter Notebook as a Pandas DataFrame. Then we used a loop to categorize the data into specific neighborhoods that returned neighborhood, latitude, and longitude. This serves as the foundation of the analysis.
+We downloaded the ‘2014 New York City Neighborhood Names' dataset hosted by NYU's Spatial Data Repository as a JSON file and imported it into a Jupyter Notebook as a Pandas DataFrame. Then we used a loop to categorize the data into specific neighborhoods that returned neighborhood, latitude, and longitude. This serves as the foundation of the analysis.
 
 ``` python
 column_names = ['Borough','Neighborhood', 'Latitude', 'Longitude']
@@ -114,14 +114,14 @@ ny_venue_data['Venue State'].replace(to_replace='New York', value = 'NY', inplac
 
 #### Duplicate Venues & N/A
 
-Some venues are assigned to multiple neighborhoods because the venue is within 1,000 meters of the neighborhood’s centroid location.
-We chose an inclusive model which counts these venues in each neighborhood in order to properly size each neighborhood’s music profile without excluding any businesses that contribute to the identity of the area. Entries returned by Foursquare with no ‘Venue City’ and given the ‘N/A’ treatment were also removed
+Some venues are assigned to multiple neighborhoods because the venue is within 1,000 meters of the neighborhood's centroid location.
+We chose an inclusive model that counts these venues in each neighborhood to properly size each neighborhood's music profile without excluding any businesses that contribute to the area's identity. Entries returned by Foursquare with no 'Venue City' and given the 'N/A' treatment were also removed.
 
 ``` python
 ny_venue_data_with_city = ny_venue_data[(ny_venue_data['Venue City'] != "N/A")]
 ```
 
-#### Removing Venues with that were not music venues
+#### Removing Venues that were not music venues
 
 Although specific category IDs were used in our API calls, the data showed a significant amount of venues that did not fall within our categories. We utilized a filter to keep only venues that we were interested in.
 
@@ -183,12 +183,12 @@ venue_info(df, 1000, 1227,v=20180405)
 
 [Findings Jupyter Notebook](Visualizations.ipynb)
 
--   The most popular neighborhood for music-related venues was University Heights with 23 venues in the same neighborhood.
+-   The most popular neighborhood for music-related venues was University Heights, with 23 venues in the same neighborhood.
 
     ![Most popular hoods](Output/Venue_Counts.png)
     ![Heatmap by number of venues in hoods](Output/heatmap.png)
     
--   While there were few Manhattan neighborhoods represented in the top 20 neighborhoods, they dominated in terms of popularity, or total number of likes.
+-   While there were few Manhattan neighborhoods represented in the top 20 neighborhoods, they dominated in terms of popularity or a total number of likes.
 
     ![Top 10 liked](Output/Top10bylikes.png)
     ![Top 10 rated](Output/Top10byrate.png)
@@ -197,6 +197,6 @@ venue_info(df, 1000, 1227,v=20180405)
 
     ![Top Category](Output/pie_chart.png)
     
-- Positive correlation between likes and rating once the rating goes beyond 7 that you can see on the scatter plot below. Also 8 out of top 10 neighborhoods with average likes are located in Manhattan as well as 7 out of the 10 locations for highest average rating.
+-   A positive correlation between likes and ratings once the rating goes beyond 7 can be seen on the scatter plot below. Also, 8 out of the top 10 neighborhoods with average likes are located in Manhattan, as well as 7 out of the 10 locations for the highest average rating.
 
-![Correlation](Output/correlation.png)
+    ![Correlation](Output/correlation.png)
